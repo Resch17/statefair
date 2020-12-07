@@ -1,8 +1,6 @@
 const contentTarget = document.querySelector('.entry');
 const eventHub = document.querySelector('#state-fair');
 
-const ticketEvent = new CustomEvent('ticketPurchased');
-
 eventHub.addEventListener('click', (clickEvent) => {
   if (clickEvent.target.id === 'rideTicket') {
     const rideEvent = new CustomEvent('rideTicketPurchased');
