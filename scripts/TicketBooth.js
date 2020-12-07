@@ -1,23 +1,23 @@
-const contentTarget = document.querySelector(".entry");
-const eventHub = document.querySelector("#state-fair");
+const contentTarget = document.querySelector('.entry');
+const eventHub = document.querySelector('#state-fair');
 
-const ticketEvent = new CustomEvent("ticketPurchased");
+const ticketEvent = new CustomEvent('ticketPurchased');
 
-eventHub.addEventListener("click", (clickEvent) => {
-  if (clickEvent.target.id === "rideTicket") {
-    const rideEvent = new CustomEvent("rideTicketPurchased");
+eventHub.addEventListener('click', (clickEvent) => {
+  if (clickEvent.target.id === 'rideTicket') {
+    const rideEvent = new CustomEvent('rideTicketPurchased');
     eventHub.dispatchEvent(rideEvent);
-  } else if (clickEvent.target.id === "foodTicket") {
-    const foodEvent = new CustomEvent("foodTicketPurchased");
+  } else if (clickEvent.target.id === 'foodTicket') {
+    const foodEvent = new CustomEvent('foodTicketPurchased');
     eventHub.dispatchEvent(foodEvent);
-  } else if (clickEvent.target.id === "gameTicket") {
-    const gameEvent = new CustomEvent("gameTicketPurchased");
+  } else if (clickEvent.target.id === 'gameTicket') {
+    const gameEvent = new CustomEvent('gameTicketPurchased');
     eventHub.dispatchEvent(gameEvent);
-  } else if (clickEvent.target.id === "sideshowTicket") {
-    const sideshowEvent = new CustomEvent("sideshowTicketPurchased");
+  } else if (clickEvent.target.id === 'sideshowTicket') {
+    const sideshowEvent = new CustomEvent('sideshowTicketPurchased');
     eventHub.dispatchEvent(sideshowEvent);
-  } else if (clickEvent.target.id === "fullPackageTicket") {
-    const fullPackageEvent = new CustomEvent("fullPackageTicketPurchased");
+  } else if (clickEvent.target.id === 'fullPackageTicket') {
+    const fullPackageEvent = new CustomEvent('fullPackageTicketPurchased');
     eventHub.dispatchEvent(fullPackageEvent);
   }
 });

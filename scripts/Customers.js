@@ -1,21 +1,21 @@
-const contentTarget = document.querySelector(".customers");
-const eventHub = document.querySelector("#state-fair");
+const contentTarget = document.querySelector('.customers');
+const eventHub = document.querySelector('#state-fair');
 
 let customerCounter = 0;
 
 export const CustomerCount = () => {
   // using custom events
   const eventArray = [
-    "rideTicketPurchased",
-    "foodTicketPurchased",
-    "gameTicketPurchased",
-    "sideshowTicketPurchased",
-    "fullPackageTicketPurchased"
+    'rideTicketPurchased',
+    'foodTicketPurchased',
+    'gameTicketPurchased',
+    'sideshowTicketPurchased',
+    'fullPackageTicketPurchased',
   ];
 
   eventArray.forEach((event) =>
     eventHub.addEventListener(event, () => {
-      if (event === "fullPackageTicketPurchased") {
+      if (event === 'fullPackageTicketPurchased') {
         customerCounter = customerCounter + 4;
       } else {
         customerCounter++;
