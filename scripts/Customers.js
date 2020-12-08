@@ -17,7 +17,7 @@ export const CustomerCount = () => {
       if (event === 'fullPackageTicketPurchased') {
         customerCounter = customerCounter + 4;
       } else {
-        customerCounter++;
+        customerCounter += 1;
       }
       contentTarget.innerHTML = `Total tickets purchased: ${customerCounter}`;
     })
